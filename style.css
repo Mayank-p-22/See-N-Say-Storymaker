@@ -24,6 +24,10 @@ select, button {
 }
 
 button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
     background-color: #ff6600;
     color: white;
     border: none;
