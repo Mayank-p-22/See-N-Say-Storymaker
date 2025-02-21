@@ -34,6 +34,7 @@ h1 {
     color: #333;
     min-height: 80px;
     margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 /* Buttons */
@@ -63,9 +64,4 @@ button {
 
 #speak-btn:hover {
     background-color: #217dbb;
-}
-
-/* Add animation for new stories */
-.story-box {
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
