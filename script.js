@@ -1,30 +1,30 @@
-// VARIABLES & ARRAYS: Store possible words for each category
-const subjects = ["The turkey", "Mom", "The cat", "My teacher", "The elephant"];
-const verbs = ["sat on", "danced with", "saw", "doesn't like", "kissed"];
-const adjectives = ["a funny", "a scary", "a slimy", "a goofy", "a barking"];
-const nouns = ["goat", "monkey", "cow", "frog", "bug"];
-const places = ["on the moon", "in my spaghetti", "in my soup", "on the grass", "in my shoes"];
+document.getElementById("generate-story").addEventListener("click", function() {
+    // Get selected values
+    let subject = document.getElementById("subject").value;
+    let verb = document.getElementById("verb").value;
+    let adjective = document.getElementById("adjective").value;
+    let noun = document.getElementById("noun").value;
+    let place = document.getElementById("place").value;
 
-// FUNCTION: Generate a random word from an array
+    // Generate story
+    let story = `${subject} ${verb} ${adjective} ${noun} ${place}.`;
+
+    // Display story
+    document.getElementById("story-output").textContent = story;
+});
+
+
+let subjects = ["The turkey", "Mom", "The cat"];
+let verbs = ["sat on", "danced with", "saw"];
+let adjectives = ["a funny", "a scary", "a slimy"];
+let nouns = ["goat", "monkey", "frog"];
+let places = ["on the moon", "in my soup", "on the grass"];
+
 function randomWord(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
-// FUNCTION: Generate a random story using concatenation (OPERATORS + STRINGS)
-function generateStory() {
-    let story = randomWord(subjects) + " " + randomWord(verbs) + " " + randomWord(adjectives) + " " + randomWord(nouns) + " " + randomWord(places) + ".";
-
-    let storyBox = document.getElementById("story-output");
-    storyBox.textContent = story;
-
-    // CONDITIONAL: Add an animation effect
-    if (storyBox.textContent.length > 0) {
-        storyBox.style.transform = "scale(1.1)";
-        storyBox.style.opacity = "0.8";
-        
-        setTimeout(() => {
-            storyBox.style.transform = "scale(1)";
-            storyBox.style.opacity = "1";
-        }, 300);
-    }
-}
+document.getElementById("generate-story").addEventListener("click", function() {
+    let story = `${randomWord(subjects)} ${randomWord(verbs)} ${randomWord(adjectives)} ${randomWord(nouns)} ${randomWord(places)}.`;
+    document.getElementById("story-output").textContent = story;
+});
