@@ -1,42 +1,71 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
-    background-color: #f8e8a6;
+    background: linear-gradient(135deg, #FFD700, #FF4500);
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
+/* Main Container */
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
 h1 {
     color: #333;
+    font-size: 28px;
 }
 
-.story-builder {
-    background: white;
-    padding: 20px;
+/* Story Box */
+.story-box {
+    background: #f1c40f;
+    padding: 15px;
     border-radius: 10px;
-    display: inline-block;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    min-height: 80px;
+    margin-bottom: 20px;
 }
 
-select, button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    font-size: 16px;
-}
-
+/* Buttons */
 button {
+    font-size: 18px;
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#generate-btn {
     background-color: #ff6600;
     color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
 }
 
-button:hover {
+#generate-btn:hover {
     background-color: #ff3300;
 }
 
-#story-output {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 15px;
+#speak-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+#speak-btn:hover {
+    background-color: #217dbb;
+}
+
+/* Add animation for new stories */
+.story-box {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
